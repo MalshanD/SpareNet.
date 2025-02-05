@@ -2,22 +2,24 @@ package com.example.sparenet.model;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity
-public class Inventory {
+public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long inventoryId;
+    private Long orderId;
 
-    private Boolean visibilityStatus;
+    private LocalDate orderDate;
+    private Double totalAmount;
+    private String orderStatus;
 
-    @ManyToMany(mappedBy = "inventories")
+    @ManyToMany(mappedBy = "orders")
     private List<Product> products;
 
     @ManyToOne
-    @JoinColumn(name = "owner_id")
+    @JoinColumn(name = "shop_id")
     private Shop shop;
-
 }
