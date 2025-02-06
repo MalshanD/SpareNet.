@@ -31,11 +31,10 @@ public class Shop {
     @OneToMany(mappedBy = "shop")
     private List<RequestProduct> requestProducts;
 
-    @OneToMany(mappedBy = "receiverShop")
-    private List<ShopRequest> receivedShopRequests;
-
-    @OneToMany(mappedBy = "senderShop")
-    private List<ShopRequest> sentShopRequests;
+//    @OneToMany(mappedBy = "receiverShop")
+//    private List<ShopRequest> receivedShopRequests;
+//    @OneToMany(mappedBy = "senderShop")
+//    private List<ShopRequest> sentShopRequests;
 
     @OneToMany(mappedBy = "shop")
     private List<FriendlyShopList> friendlyShopLists;
