@@ -26,13 +26,8 @@ public class Product {
     )
     private List<Category> categories;
 
-    @ManyToMany
-    @JoinTable(
-            name = "product_inventory",
-            joinColumns = @JoinColumn(name = "product_id"),
-            inverseJoinColumns = @JoinColumn(name = "inventory_id")
-    )
-    private List<Inventory> inventories;
+    @ManyToOne
+    private Inventory inventories;
 
     @ManyToMany
     @JoinTable(

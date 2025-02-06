@@ -13,7 +13,7 @@ public class Inventory {
 
     private Boolean visibilityStatus;
 
-    @ManyToMany(mappedBy = "inventories")
+    @OneToMany(mappedBy = "inventories")
     private List<Product> products;
 
     @OneToMany(mappedBy = "shop")
