@@ -16,8 +16,8 @@ public class Inventory {
     @ManyToMany(mappedBy = "inventories")
     private List<Product> products;
 
-    @ManyToOne
+    @OneToMany(mappedBy = "shop")
     @JoinColumn(name = "owner_id")
-    private Shop shop;
+    private List<Shop> shop;
 
 }
